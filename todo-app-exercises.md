@@ -1,5 +1,64 @@
 # Todo App - Övningar
 
+## Del 1 - Grundstruktur
+
+Skapa en grundläggande todo-app med möjlighet att lägga till todos.
+
+1. Skapa reaktiva variabler för:
+   - newTodoText (för input-fältet)
+   - todos (array med todo-objekt)
+2. Implementera en addTodo-metod som:
+   - Skapar ett nytt todo-objekt med id och text
+   - Lägger till objektet i todos-arrayen
+   - Rensar input-fältet
+3. Bygg template med:
+   - Input-fält med v-model
+   - Lägg till-knapp
+   - Lista som visar alla todos
+4. Styla appen enligt designen i CSS-filen
+
+Tips:
+
+- Använd Date.now() för att generera unika id:n
+- Testa att lägga till flera todos
+- Verifiera att listan uppdateras korrekt
+
+## Del 2 - Färdigmarkering
+
+Lägg till möjlighet att markera todos som klara.
+
+1. Uppdatera todo-strukturen med en completed property (boolean)
+2. Lägg till checkbox för varje todo
+3. Bind checkbox till todo.completed med v-model
+4. Implementera styling för klara todos:
+   - Genomstruken text
+   - Grå textfärg
+   - Ljusare bakgrund
+5. Använd dynamiska klasser för styling
+
+Tips:
+
+- Använd v-bind för class binding
+- Testa att toggla todos mellan klart/ej klart
+- Verifiera att stylingen ändras korrekt
+
+## Del 3 - Validering
+
+Implementera validering av nya todos.
+
+1. Skapa en reaktiv variabel `showError` med ref()
+2. Skapa en computed property `isValidTodo` som kontrollerar att texten är minst 3 tecken
+3. Uppdatera addTodo-metoden med validering
+4. Lägg till error-styling på input-fältet
+5. Visa ett felmeddelande när valideringen misslyckas
+6. Inaktivera "Lägg till"-knappen när texten är ogiltig
+
+Tips:
+
+- Använd v-bind för dynamiska klasser
+- Använd v-if för att visa/dölja felmeddelande
+- Använd :disabled för att inaktivera knappen
+
 ## Del 4 - Statistik
 
 Lägg till en statistiksektion som visar information om todos.
